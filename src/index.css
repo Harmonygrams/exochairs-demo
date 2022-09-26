@@ -1,3 +1,21 @@
+*{
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  text-decoration: none; 
+  list-style-type: none; 
+}
+:root{
+  --primary-color-dim: #6C1B02; 
+  --primary-color-light: #431302;
+  --primary-color-variant : #9A2502; 
+  --border-line : #dfd8d6; 
+  --color-white: #fefefe;
+  --color-dark-faint: rgb(94, 93, 93);
+
+  --primary-transition: transition: all .2s ease-in-out;
+  --box-shadow: 5px 5px 10px rgba(224, 222, 222, 0.4); 
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +28,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container{
+  width: 1200px; 
+  max-width: 90%;
+  margin: 0 auto; 
+}
+.cursor{
+  cursor: pointer; 
+}
+img{
+  width: 100%;
 }

@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {Header, Deadend, Login, Signup} from './components/index'
+import {Routes, Route} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 function App() {
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Routes> 
+        <Route path="/" element={<Header isAuthenticated={isAuthenticated}/>}/>
+        <Route path="/login" element={<Login />} /> 
+        <Route path="/register" element={<Signup />} />
+        <Route path="*" element={<Deadend />} />
+      </Routes>
     </div>
   );
 }
-
 export default App;

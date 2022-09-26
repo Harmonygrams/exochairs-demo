@@ -1,0 +1,72 @@
+.login-page{
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.login-header{
+    position: absolute; 
+    top: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    
+}
+.create-new-accout{
+    border: 1px solid var(--border-line); 
+    padding: 10px 10px; 
+    border-radius: 5px; 
+    box-shadow: var(--box-shadow); 
+}
+.form-container{
+    margin-top: 5%; 
+}
+.form{
+    display: flex;
+    width: 350px; 
+    height: 400px; 
+    flex-direction: column; 
+    padding: 20px;
+    align-items: center; 
+    gap: 30px; 
+}
+.form h2{
+    font-weight: 600; 
+    margin-top: 20px; 
+}
+.form__data-container{
+    display: flex; 
+    flex-direction: column;
+    width: 80%;
+}
+.form__data-container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form__data-container div p{
+    font-size: .8rem; 
+    margin-block: 5px; 
+}
+.form-label{
+    font-size: .8rem; 
+    margin-block: 5px; 
+}
+.form__data-container input{
+    width: 100%; 
+    padding: 8px 10px; 
+}
+.form button{
+    width: 80%;
+    padding: 8px 10px; 
+    background-color: var(--primary-color-dim);
+    color: white; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 5px;
+}
+.confirm-pwd{
+    margin-top: 10px; 
+}

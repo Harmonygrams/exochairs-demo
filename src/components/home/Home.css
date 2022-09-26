@@ -1,0 +1,17 @@
+.product__card-hero{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border: 1px solid var(--border-line); 
+}
+.product__card-title{
+    position: relative;
+}
+.home__card.title{
+    position: absolute;
+    top: 40px; 
+    left: 40px; 
+}
+.home__card.title p{
+    color: var(--color-dark-faint);
+    font-size: .9rem;
+}

@@ -1,0 +1,63 @@
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-line); 
+    padding-inline-start: 50px;
+}
+.hero__title-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column; 
+    gap: 30px; 
+}
+.hero__title{
+    color: var(--primary-color-variant);
+    font-weight: 500;
+}
+.review{
+    color: var(--primary-color-variant);
+    font-size: .9rem;
+}
+.review i{
+    margin-right: 3px;
+}
+.cta{
+    display: flex;
+    align-items: center;
+}
+.cta > button{
+    background-color: var(--primary-color-dim); 
+    padding-block: 15px; 
+    padding-inline: 25px; 
+    color: white; 
+    display: flex;
+    justify-content: space-between;
+    border: none; 
+    gap: 10px;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.wish__list{
+    margin-left: 20px; 
+    border: 1px solid gray; 
+    padding-block: 13px; 
+    padding-inline: 12px; 
+    color: var(--primary-color-dim); 
+    cursor: pointer; 
+    font-size: .9rem;
+    transition: all .2s ease-in-out;
+}
+.wish__list:hover{
+    background-color: var(--primary-color-dim);
+    color: var(--color-white);
+}
+.money-back-guranteed{
+    display: flex;
+    font-size: .7rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 4px; 
+    color: var(--primary-color-dim);
+}
