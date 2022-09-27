@@ -8,15 +8,8 @@ const Navbar = ({isAuthenticated}) => {
     const [activeNav, updateActiveNav] = useState(false)
     const dispatch = useDispatch()
     const logout = async () => {
-        const url = `http://localhost:5001/user/logout`
-        try{
-            const response = await axios.get(url)
-            const  {isAuthenticated}= await response.data
-            dispatch(authActions.setAuthentication(isAuthenticated))
-        }catch(err){
-            throw err
-        }
-    }  
+        dispatch(authActions.logout())
+    }
     return(
         <header className='header'> 
             <div className='sub__header'>

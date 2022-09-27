@@ -30,7 +30,9 @@ const Login = () => {
                     isAuthenticated : true, 
                     username : data.name[0]
                 }))
-                document.cookie = JSON.stringify(data.token)
+                //Saving the token and expiration date in the localstorage 
+                window.localStorage.setItem("token", data.token)
+                window.localStorage.setItem("expiresIn", data.expiresIn)
             }
         }catch(err){console.log("Couldn't login", err)}
     }

@@ -6,6 +6,13 @@ const authSlice = createSlice({
         setAuthentication : (state, action) => {
             state.isAuthenticated = action.payload.isAuthenticated
             state.username = action.payload.username
+        }, 
+        logout : (state) => {
+            window.localStorage.removeItem("token")
+            window.localStorage.removeItem("expiresIn")
+        },
+        isLoggedOut : (state) => {
+            state.isAuthenticated = !state.isAuthenticated
         }
     }
 })

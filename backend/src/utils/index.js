@@ -47,7 +47,7 @@ const genToken = (user) => {
        expires : expiresIn,
     }, PRIV_KEY, {algorithm : 'RS256'})
     return {
-        token : "Bearer" + token, 
+        token : "Bearer " + token, 
         expiresIn : expiresIn
     }
 }
