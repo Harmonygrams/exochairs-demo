@@ -98,3 +98,26 @@ nav{
 .user__action-link:hover{
     color: var(--primary-color-light); 
 }
+.cart{
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+.cart-counter-container{
+    position: relative;
+    padding-block: 7px; 
+    padding-inline: 7px;
+    
+}
+.cart-counter-container i{
+    margin-inline: 0; 
+}
+.cart__items-number{
+    position: absolute;
+    top: 0;
+    font-size: .7rem;
+    border-radius: 50%;
+    padding: 4px 5px; 
+    background-color: var(--primary-color-dim);
+    color: var(--color-white); 
+}

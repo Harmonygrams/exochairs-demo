@@ -27,12 +27,11 @@ const Login = () => {
             if(!data.success)return setFormErrorMsg({ type : data.type, message : data.msg })
             if(data.success && data.token){
                 dispatch(authActions.setAuthentication({
-                    isAuthenticated : true, 
-                    username : data.name[0]
+                    isAuthenticated : true,
                 }))
-                //Saving the token and expiration date in the localstorage 
                 window.localStorage.setItem("token", data.token)
                 window.localStorage.setItem("expiresIn", data.expiresIn)
+                window.localStorage.setItem("username", data.name) 
             }
         }catch(err){console.log("Couldn't login", err)}
     }

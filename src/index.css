@@ -13,7 +13,7 @@
   --color-white: #fefefe;
   --color-dark-faint: rgb(94, 93, 93);
 
-  --primary-transition: transition: all .2s ease-in-out;
+  --primary-transition: all .25s ease-in-out;
   --box-shadow: 5px 5px 10px rgba(224, 222, 222, 0.4); 
 }
 body {

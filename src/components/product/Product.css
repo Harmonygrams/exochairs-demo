@@ -1,0 +1,95 @@
+.product{
+    display: flex;
+    margin-top: 60px; 
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.product-col-1{
+    overflow: hidden;
+}
+.product-col-1 img{
+    transition: var(--primary-transition); 
+}   
+.product-col-1 img:hover{
+    scale: 110%;
+}
+.product-col-2{
+    width: 35%; 
+}
+.item__info-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:  10px; 
+}
+.product__page.item__name{
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+.product__page.item__price{
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--primary-color-dim);
+}
+.product__page.brand__name{
+    margin-bottom: 25px; 
+    font-size: .85rem;
+}
+.product__page.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; 
+    font-size: .85rem;
+    font-weight: 400;
+}
+.product__page.scroll_to_bottom{
+    border: 1px solid var(--primary-color-dim); 
+    padding: 10px 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color-dim);
+    width: 50%;
+    text-align: center;
+    cursor: pointer; 
+    transition: var(--primary-transition);
+}
+.product__page.scroll_to_bottom:hover, 
+.product__page.scroll_to_bottom:active{
+    background-color: var(--primary-color-dim);
+    color: white;
+}
+.product__page.add__to__cart-button{
+    background-color: var(--primary-color-dim);
+    color: var(--color-white); 
+    padding: 10px 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: var(--primary-transition);
+}
+.product__page.add__to__cart-button:hover{
+    background-color: var(--primary-color-light);
+}
+.product__page.item__description{
+    margin-block: 25px; 
+    font-size: .9rem; 
+    color: var(--color-dark-faint); 
+    line-height: 1.5;
+}
+.product__page.product__details{
+    margin-top: 25px; 
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.product__detail-h3{
+    font-size: .85rem;
+    margin-bottom: 5px;
+}
+.product__detail-p{
+    font-size: .85rem;
+    
+}

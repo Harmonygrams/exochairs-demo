@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, Navigate} from 'react-router-dom'
 import { useState } from 'react' 
 import '../login/Login.css' 
 import axios from 'axios'
 const SignUp = () => {
+    const [isRegistered, setIsRegistered] = useState(false) 
     const [formErrorMsg, setFormErrorMsg] = useState({
         type : 0, 
         message : ''
@@ -34,7 +35,7 @@ const SignUp = () => {
                 })
                 return
             }
-            console.log(data) 
+            setIsRegistered(true) 
         }catch(err){
             console.log('There was an error sending request')
             console.log(err)
@@ -100,6 +101,7 @@ const SignUp = () => {
                     <button className="login-button"> Sign up</button>
                 </form>
             </div>
+            {isRegistered && <Navigate to="/login"/>}
         </section>
     )
 }

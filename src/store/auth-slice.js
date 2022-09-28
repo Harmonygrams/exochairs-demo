@@ -10,9 +10,17 @@ const authSlice = createSlice({
         logout : (state) => {
             window.localStorage.removeItem("token")
             window.localStorage.removeItem("expiresIn")
+            state.isAuthenticated = false
+            state.username = "Guest"
         },
-        isLoggedOut : (state) => {
-            state.isAuthenticated = !state.isAuthenticated
+        isLoggedIn : (state) => {
+            const token = window.localStorage.getItem("token") 
+            const expiresIn = window.localStorage.getItem("expiresIn")
+            const username = window.localStorage.getItem("username")
+            if(token && expiresIn){ 
+                state.isAuthenticated = true
+                state.username = username.split(' ')[0]
+            }
         }
     }
 })

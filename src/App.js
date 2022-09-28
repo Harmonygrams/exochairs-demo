@@ -1,15 +1,14 @@
 import './App.css';
-import {Header, Deadend, Login, Signup} from './components/index'
+import {Deadend, Header, Login, Product, Signup} from './components/index'
 import {Routes, Route} from 'react-router-dom'
-import { useSelector } from 'react-redux'
 function App() {
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated)
   return (
     <div className='app'>
       <Routes> 
-        <Route path="/" element={<Header isAuthenticated={isAuthenticated}/>}/>
+        <Route path="/" element={<Header />}/>
         <Route path="/login" element={<Login />} /> 
         <Route path="/register" element={<Signup />} />
+        <Route path="/product/" element={<Product />} />
         <Route path="*" element={<Deadend />} />
       </Routes>
     </div>

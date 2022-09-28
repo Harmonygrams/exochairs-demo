@@ -1,6 +1,17 @@
-import HeroImage from '../../images/Hero.png'
-import "./Hero.css" 
+import "./Hero.css"
+import homeProducts  from "../../data/homeProducts"
+import { actions as cartActions } from '../../store/cart-slice'
+import { useDispatch, useSelector } from 'react-redux'
 const Hero = () =>{
+    const cartItems = useSelector(state => state.cart.itemsList) 
+    const heroImage = require(`../../images/${homeProducts.imageName}.png`)
+    const dispatch = useDispatch() 
+    const addToCart = () => {
+        dispatch(cartActions.addToCart({
+            ...homeProducts
+        }))
+    } 
+    console.log(cartItems) 
     return(
         <>
             <div className="hero container"> 
@@ -14,12 +25,12 @@ const Hero = () =>{
                         <i class="fa-solid fa-star-sharp"></i>
                         <i class="fa-solid fa-star-sharp"></i>
                         <i class="fa-regular fa-star-sharp-half-stroke"></i>
-                        <span>(234)</span>
+                        <span>( {homeProducts.reviewCount} )</span>
                     </div>
                     <div className='cta'> 
-                        <button> 
+                        <button onClick={addToCart}> 
                             <i class="fa-regular fa-cart-plus"></i>
-                            $5,499
+                            ${homeProducts.itemPrice}
                         </button>   
                         <div className="wish__list"> 
                             <i class="fa-regular fa-basket-shopping"></i>
@@ -32,7 +43,7 @@ const Hero = () =>{
                 </div>
                 <div className='hero__image container'> 
                     <img
-                        src={HeroImage}
+                        src={heroImage}
                         alt="Hero backgoround"
                     />
                 </div>

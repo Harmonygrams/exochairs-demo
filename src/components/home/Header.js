@@ -3,11 +3,11 @@ import Hero from '../hero/Hero'
 import SofaCardImage from '../../images/Couch.png'
 import './Home.css'
 import ChairImage from '../../images/Chair.jpeg'
-const Header = ({isAuthenticated}) => {
+const Header = ({isAuthenticated, username}) => {
     return(
         <>
             <div> 
-                <Navbar isAuthenticated={isAuthenticated}/> 
+                <Navbar isAuthenticated={isAuthenticated} username={username}/> 
                 <Hero />
             </div>
             <div className='product__card-hero container cursor'> 

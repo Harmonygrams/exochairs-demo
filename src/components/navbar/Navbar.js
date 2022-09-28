@@ -1,12 +1,15 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import "./Navbar.css" 
-import axios from 'axios'
-import { useDispatch } from 'react-redux'
+import { useDispatch , useSelector} from 'react-redux'
 import {actions as authActions} from '../../store/auth-slice'
-const Navbar = ({isAuthenticated}) => {
-    const [activeNav, updateActiveNav] = useState(false)
+const Navbar = () => {
     const dispatch = useDispatch()
+    const cart = useSelector(state => state.cart)
+    const isAuthenticated = useSelector(state => state.auth.isAuthenticated)
+    const username = useSelector(state => state.auth.username)
+    const [activeNav, updateActiveNav] = useState(false)
+    dispatch(authActions.isLoggedIn())
     const logout = async () => {
         dispatch(authActions.logout())
     }
@@ -38,8 +41,11 @@ const Navbar = ({isAuthenticated}) => {
                         <i class="fa-solid fa-sliders"></i>
                     </li>
                     <li className="nav nav__item second">
-                        <Link className="nav__link" to="/cart">
-                            <i className="fa-regular fa-cart-shopping"></i>
+                        <Link className="nav__link cart" to="/cart">
+                            <div className='cart-counter-container'>
+                                <i className="fa-regular fa-cart-shopping"></i>
+                                <small className="cart__items-number">{cart.totalQuantity}</small> 
+                            </div>
                             Cart
                         </Link>
                     </li>
@@ -52,7 +58,7 @@ const Navbar = ({isAuthenticated}) => {
                     <li className="nav nav__item last"> 
                         <Link className="nav__link" to="user">
                             <i className="fa-duotone fa-user"></i>
-                            {isAuthenticated ? "Harmony" : "Guest"}
+                            {username}
                         </Link>
                         <i style={{paddingLeft : "10px"}}className="fa-regular fa-caret-down user" onClick={() => updateActiveNav(prevState => !prevState)}></i>
                         <div className='user-options' style={{display : activeNav ? "block" : "none"}}>
