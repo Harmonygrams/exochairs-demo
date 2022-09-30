@@ -1,5 +1,5 @@
 import './App.css';
-import {Deadend, Header, Login, Product, Signup} from './components/index'
+import {Collections, Deadend, Header, Login, Product, Signup} from './components/index'
 import {Routes, Route} from 'react-router-dom'
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Route path="/register" element={<Signup />} />
         <Route path="/product/" element={<Product />} />
         <Route path="*" element={<Deadend />} />
+        <Route path="/collections" element={<Collections />} />
       </Routes>
     </div>
   );

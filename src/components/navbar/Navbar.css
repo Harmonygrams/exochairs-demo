@@ -40,6 +40,7 @@ nav{
     flex: 1;
     padding-left: 30px;
     border-left: 1px var(--border-line) solid;
+    background-color: transparent;
 }
 .search-bar input{
     width: 90%;
@@ -47,6 +48,7 @@ nav{
     padding-inline: 10px; 
     border: none;
     outline: none;
+    background-color: transparent;
 }
 .search-bar i{
     font-size: 1rem;

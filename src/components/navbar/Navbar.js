@@ -50,7 +50,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="nav nav__item third"> 
-                        <Link className="nav__link" to="/categories">
+                        <Link className="nav__link" to="/collections">
                             <i className="fa-regular fa-layer-group"></i>
                             Categories
                         </Link>

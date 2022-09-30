@@ -1,6 +1,6 @@
 const mongoose = require('mongoose') 
 const DB_NAME = "exochairs" 
-const MONGO_URI = `mongodb://localhost:27017/${DB_NAME}`
+const MONGO_URI = `mongodb+srv://admin:admin@cluster0.rnti4kn.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
 
 mongoose.connect(MONGO_URI, {
     useUnifiedTopology : true, 
